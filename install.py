@@ -250,14 +250,14 @@ def configureMirrorlist():
     ###protocols to use 
     protocolUrl = ''
     useHttp = raw_input("Use http? ([Y/n]): ")
-    while useHttp.lower() != 'y' or useHttp.lower() != 'n' or useHttp.lower() != 'yes' or useHttp.lower() != 'no':
+    while useHttp.lower() != 'y' and useHttp.lower() != 'n' and useHttp.lower() != 'yes' and useHttp.lower() != 'no':
         useHttp = raw_input("Opps you did not say y or n. Use http? ([Y/n]): ")
 
     if useHttp.lower() == 'yes' or useHttp.lower() == 'y':
         protocolUrl += 'protocol=http&'
     
     useHttps = raw_input("Use https? ([Y/n]): ")
-    while useHttps.lower() != 'y' or useHttps.lower() != 'n' or useHttps.lower() != 'yes' or useHttps.lower() != 'no':
+    while useHttps.lower() != 'y' and useHttps.lower() != 'n' and useHttps.lower() != 'yes' and useHttps.lower() != 'no':
         useHttps = raw_input("Opps you did not say y or n. Use https? ([Y/n]): ")
 
     if useHttps.lower() == 'yes' or useHttps.lower() == 'y':
@@ -267,14 +267,14 @@ def configureMirrorlist():
     ###ip to use
     ipUrl = ''
     useIpv4 = raw_input("Use Ipv4? ([Y/n]): ")
-    while useIpv4.lower() != 'y' or useIpv4.lower() != 'n' or useIpv4.lower() != 'yes' or useIpv4.lower() != 'no':
+    while useIpv4.lower() != 'y' and useIpv4.lower() != 'n' and useIpv4.lower() != 'yes' and useIpv4.lower() != 'no':
         useIpv4 = raw_input("Opps you did not say y or n. Use Ipv4? ([Y/n]): ")
         
     if useIpv4.lower() == 'yes' or useIpv4.lower() == 'y':
         ipUrl += 'ip_version=4&'
 
     useIpv4 = raw_input("Use Ipv6? ([Y/n]): ")
-    while useIpv6.lower() != 'y' or useIpv6.lower() != 'n' or useIpv6.lower() != 'yes' or useIpv6.lower() != 'no':
+    while useIpv6.lower() != 'y' and useIpv6.lower() != 'n' and useIpv6.lower() != 'yes' and useIpv6.lower() != 'no':
         useIpv6 = raw_input("Opps you did not say y or n. Use Ipv6? ([Y/n]): ")
 
     if useIpv6.lower() == 'yes' or useIpv6.lower() == 'y':
@@ -282,7 +282,7 @@ def configureMirrorlist():
 
     statusUrl = ''
     useStatus = raw_input("Use status? ([Y/n]): ")
-    while useStatus.lower() != 'y' or useStatus.lower() != 'n' or useStatus.lower() != 'yes' or useStatus.lower() != 'no':
+    while useStatus.lower() != 'y' and useStatus.lower() != 'n' and useStatus.lower() != 'yes' and useStatus.lower() != 'no':
         useStatus = raw_input("Opps you did not say y or n. Use status? ([Y/n]): ")
 
     if useStatus.lower() == 'yes' or useStatus.lower() == 'y':

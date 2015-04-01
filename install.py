@@ -275,7 +275,7 @@ def configureMirrorlist():
     if useIpv4.lower() == 'yes' or useIpv4.lower() == 'y':
         ipUrl += 'ip_version=4&'
 
-    useIpv4 = raw_input("Use Ipv6? ([Y/n]): ")
+    useIpv6 = raw_input("Use Ipv6? ([Y/n]): ")
     while useIpv6.lower() != 'y' and useIpv6.lower() != 'n' and useIpv6.lower() != 'yes' and useIpv6.lower() != 'no':
         useIpv6 = raw_input("Opps you did not say y or n. Use Ipv6? ([Y/n]): ")
 
@@ -301,7 +301,9 @@ def configureMirrorlist():
     mirrorFile.close()
 
     #get archassault mirrorlist
-    response = urllib2.urlopen(archassaultMirrorUrl)
+    headers = {'User-Agent' : 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'}
+    req = urllib2.Request(archassaultMirrorUrl, '', headers)
+    response = urllib2.urlopen(req)
     mirrorlist = response.read()
     mirrorFile = open('/etc/pacman.d/archassault-mirrorlist', 'w')
     mirrorFile.write(mirrorlist)

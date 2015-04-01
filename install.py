@@ -231,6 +231,8 @@ def configureMirrorlist():
        if len(table)  == 4:
            print("{0}".format(table))
            table = []
+       else:
+           table.append(c)
 
     selectedContries = raw_input("Select Contries for mirrorlist (Comma sperated): ")
     selectedContries = selectedContries.split(",")
